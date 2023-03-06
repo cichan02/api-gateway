@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: micro-airport
+          uri: lb://micro-airport
+          predicates:
+            - Path=/airlines
+            - Method=GET
+        - id: test
+          uri: lb://eureka-test-client
+          predicates:
+            - Path=/main/hello
+            - Method=GET
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    service-host: localhost
+    service-url:
+      defaultZone: http://${eureka.client.service-host}:8761/eureka
