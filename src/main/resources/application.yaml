@@ -1,7 +1,6 @@
 spring:
   application:
     name: api-gateway
-    host: localhost
   cloud:
     gateway:
       discovery:
@@ -25,5 +24,6 @@ server:
 
 eureka:
   client:
+    service-host: localhost
     service-url:
-      defaultZone: http://${spring.application.host}:8761/eureka
+      defaultZone: http://${eureka.client.service-host}:8761/eureka
