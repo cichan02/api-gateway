@@ -8,8 +8,16 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: airport
+        - id: micro-airport
           uri: lb://micro-airport
+          predicates:
+            - Path=/airlines
+            - Method=GET
+        - id: test
+          uri: lb://eureka-test-client
+          predicates:
+            - Path=/main/hello
+            - Method=GET
 
 server:
   port: 8765
@@ -18,4 +26,3 @@ eureka:
   client:
     service-url:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-
