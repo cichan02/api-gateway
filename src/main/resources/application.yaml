@@ -8,8 +8,8 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: micro-airport
-          uri: lb://micro-airport
+        - id: micro-airport-core
+          uri: lb://micro-airport-core
           predicates:
             - Path=/airlines
             - Method=GET
