@@ -8,16 +8,14 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: micro-airport-core
+        - id: airports
           uri: lb://micro-airport-core
           predicates:
-            - Path=/airlines
-            - Method=GET
-        - id: test
-          uri: lb://eureka-test-client
+            - Path=/airlines/**
+        - id: countries
+          uri: lb://micro-airport-location
           predicates:
-            - Path=/main/hello
-            - Method=GET
+            - Path=/countries/**
 
 server:
   port: 8765
