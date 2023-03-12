@@ -9,9 +9,13 @@ spring:
           lower-case-service-id: true
       routes:
         - id: airports
-          uri: lb://micro-airport-core
+          uri: lb://micro-airport-location
           predicates:
-            - Path=/airlines/**
+            - Path=/airports/**
+        - id: cities
+          uri: lb://micro-airport-location
+          predicates:
+            - Path=/cities/**
         - id: countries
           uri: lb://micro-airport-location
           predicates:
