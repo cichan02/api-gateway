@@ -54,4 +54,4 @@ eureka:
   client:
     service-host: localhost
     service-url:
-      defaultZone: http://${eureka.client.service-host}:8761/eureka
+      defaultZone: http://${eureka.client.service-host}:8761/eureka/
