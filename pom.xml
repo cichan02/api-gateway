@@ -10,11 +10,17 @@
     <description>api-gateway</description>
 
     <properties>
+        <!-- General properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <start-class>by.piskunou.solvdlaba.ApiGatewayApplication</start-class>
         <java.version>17</java.version>
+        <maven.version>3.9.0</maven.version>
         <spring-boot.version>3.0.4</spring-boot.version>
+
+        <!-- Dependency properties-->
+        <spring-cloud.version>4.0.3</spring-cloud.version>
+        <netty.version>4.1.90.Final</netty.version>
         <snakeyaml.version>2.0</snakeyaml.version>
         <eureka.version>4.0.0</eureka.version>
         <woodstox.version>6.5.0</woodstox.version>
@@ -23,11 +29,14 @@
         <xstream.version> 1.4.20</xstream.version>
         <httpclient.version>4.5.14</httpclient.version>
         <commons-codes.version>1.15</commons-codes.version>
-        <jettison.version>1.5.3</jettison.version>
-        <projectreactor.version>3.5.3</projectreactor.version>
+        <jettison.version>1.5.4</jettison.version>
+        <projectreactor.version>3.5.4</projectreactor.version>
         <slf4j.version>2.0.6</slf4j.version>
         <jackson.version>2.14.2</jackson.version>
-        <spring-cloud.version>2022.0.1</spring-cloud.version>
+        <spring-cloud-dependencies.version>2022.0.1</spring-cloud-dependencies.version>
+        <spring-cloud-gateway.version>4.0.0-RC3</spring-cloud-gateway.version>
+
+        <!-- Build properties -->
         <maven.compiler.version>3.11.0</maven.compiler.version>
     </properties>
 
@@ -49,13 +58,13 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-codec</artifactId>
-            <version>4.1.89.Final</version>
+            <version>${netty.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
-            <version>${spring-boot.version}</version>
+            <version>${spring-cloud.version}</version>
         </dependency>
 
         <!-- Additional newer dependencies to Spring Boot Reactor -->
@@ -151,14 +160,14 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>${spring-cloud-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-gateway</artifactId>
-                <version>4.0.0-RC3</version>
+                <version>${spring-cloud-gateway.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

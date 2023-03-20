@@ -22,6 +22,30 @@ spring:
           uri: lb://micro-airport-location
           predicates:
             - Path=/countries/**
+        - id: refresh
+          uri: lb://authentication-service
+          predicates:
+            - Path=/refresh
+        - id: password
+          uri: lb://authentication-service
+          predicates:
+            - Path=/password/**
+        - id: extract-username
+          uri: lb://authentication-service
+          predicates:
+            - Path=/extract-username
+        - id: valid-access-token
+          uri: lb://authentication-service
+          predicates:
+            - Path=/valid-access-token
+        - id: generate-token
+          uri: lb://authentication-service
+          predicates:
+            - Path=/generate-token/**
+        - id: users
+          uri: lb://micro-airport-core
+          predicates:
+            - Path=/users/**
 
 server:
   port: 8765
