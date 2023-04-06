@@ -46,6 +46,10 @@ spring:
           uri: lb://micro-airport-core
           predicates:
             - Path=/users/**
+        - id: airlines
+          uri: lb://airline-service
+          predicates:
+            - Path=/airlines/**
 
 server:
   port: 8765
