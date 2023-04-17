@@ -16,7 +16,7 @@
         <start-class>by.piskunou.solvdlaba.ApiGatewayApplication</start-class>
         <java.version>17</java.version>
         <maven.version>3.9.0</maven.version>
-        <spring-boot.version>3.0.4</spring-boot.version>
+        <spring-boot.version>3.0.5</spring-boot.version>
 
         <!-- Dependency properties-->
         <spring-cloud.version>4.0.3</spring-cloud.version>
@@ -31,7 +31,7 @@
         <commons-codes.version>1.15</commons-codes.version>
         <jettison.version>1.5.4</jettison.version>
         <projectreactor.version>3.5.4</projectreactor.version>
-        <slf4j.version>2.0.6</slf4j.version>
+        <slf4j.version>2.0.7</slf4j.version>
         <jackson.version>2.14.2</jackson.version>
         <spring-cloud-dependencies.version>2022.0.1</spring-cloud-dependencies.version>
         <spring-cloud-gateway.version>4.0.0-RC3</spring-cloud-gateway.version>
@@ -54,7 +54,6 @@
         </dependency>
 
         <!-- Additional newer dependencies to WebFlux -->
-        <!-- https://mvnrepository.com/artifact/io.netty/netty-codec -->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-codec</artifactId>
@@ -68,7 +67,6 @@
         </dependency>
 
         <!-- Additional newer dependencies to Spring Boot Reactor -->
-        <!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
@@ -82,43 +80,36 @@
         </dependency>
 
         <!-- Additional newer dependencies to Eureka -->
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.woodstox/woodstox-core -->
         <dependency>
             <groupId>com.fasterxml.woodstox</groupId>
             <artifactId>woodstox-core</artifactId>
             <version>${woodstox.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
             <version>${xstream.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>${httpclient.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>${commons-codes.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.codehaus.jettison/jettison -->
         <dependency>
             <groupId>org.codehaus.jettison</groupId>
             <artifactId>jettison</artifactId>
@@ -140,14 +131,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
